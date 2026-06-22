@@ -1,167 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<meta name="aagman-build" content="20260622224727">
-<style>html.aagman-checking{visibility:hidden}</style>
-<script>
-// GitHub Pages serves HTML with a 10-minute cache. On mobile, Chrome Custom
-// Tabs / in-app browsers often ignore query strings when caching HTML, so a
-// ?_=123 cache-bust can still return the stale copy. Instead we compare the
-// rendered page against a *path-variant* copy (e.g. /terms -> /terms.html,
-// / -> /index.html) which has a separate cache key and therefore must be
-// fetched fresh. If the current copy is stale, we redirect to that path
-// variant and then restore the clean URL.
-(function () {
-  var html = document.documentElement;
-  function show() { html.classList.remove('aagman-checking'); }
-
-  // Only needed on GitHub Pages. Vercel serves HTML with no-store.
-  if (location.hostname.indexOf('github.io') === -1) { show(); return; }
-
-  // We just loaded the path-variant copy. Restore the original clean URL.
-  var restore = null;
-  try {
-    restore = sessionStorage.getItem('aagman_bust_restore');
-    if (restore) sessionStorage.removeItem('aagman_bust_restore');
-  } catch (e) {}
-  if (restore) {
-    if (history.replaceState) {
-      try { history.replaceState({}, document.title, location.origin + restore); } catch (e) {}
-    }
-    show();
-    return;
-  }
-
-  var currentMeta = document.querySelector('meta[name="aagman-build"]');
-  var current = currentMeta ? currentMeta.content : '';
-  if (!current) { show(); return; }
-
-  html.classList.add('aagman-checking');
-
-  // Purge any service workers / caches that could hold a stale copy.
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(function (regs) {
-      regs.forEach(function (r) { r.unregister(); });
-    }).catch(function () {});
-  }
-  if ('caches' in window) {
-    caches.keys().then(function (keys) {
-      keys.forEach(function (k) { caches.delete(k); });
-    }).catch(function () {});
-  }
-
-  // Build the path-variant URL. It shares the same file but has a separate
-  // GitHub Pages cache key, so it is always served from origin.
-  var path = location.pathname;
-  var bustPath;
-  if (path.slice(-1) === '/') {
-    bustPath = path + 'index.html';
-  } else if (/\.html$/i.test(path)) {
-    bustPath = path.replace(/\.html$/i, '');
-  } else {
-    bustPath = path + '.html';
-  }
-  var bustUrl = location.origin + bustPath +
-    (location.search ? location.search + '&' : '?') + '_=' + Date.now() + location.hash;
-
-  function getBuild(text) {
-    var m = /meta[^>]*name=["']aagman-build["'][^>]*content=["']([^"']+)["']/i.exec(text);
-    return m ? m[1] : '';
-  }
-
-  function bust() {
-    try { sessionStorage.setItem('aagman_bust_restore', location.pathname + location.search + location.hash); } catch (e) {}
-    location.replace(bustUrl);
-  }
-
-  // If the check hangs, redirect rather than risk showing stale content.
-  var fallbackTimer = setTimeout(bust, 2000);
-
-  try {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', bustUrl, false);
-    xhr.send();
-    if (xhr.status === 200) {
-      clearTimeout(fallbackTimer);
-      var fetched = getBuild(xhr.responseText);
-      if (fetched && fetched !== current) { bust(); return; }
-      show();
-      return;
-    }
-  } catch (e) {}
-
-  // Non-200 or network error: rely on the fallback redirect.
-})();
-</script>
 <title>Risk Disclosure — Āagman</title>
-<meta name="description" content="Āagman is an AI trading tool, not a SEBI-registered investment adviser. Trading involves significant risk of loss. Read our full risk disclosure.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://aagman-landing-page-hxgc.vercel.app/risk-disclosure.html">
-<meta property="og:title" content="Risk Disclosure — Āagman">
-<meta property="og:description" content="Āagman is an AI trading tool, not a SEBI-registered investment adviser. Trading involves significant risk of loss. Read our full risk disclosure.">
-<meta property="og:url" content="https://aagman-landing-page-hxgc.vercel.app/risk-disclosure.html">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://aagman-landing-page-hxgc.vercel.app/uploads/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Risk Disclosure — Āagman">
-<meta name="twitter:description" content="Āagman is an AI trading tool, not a SEBI-registered investment adviser. Trading involves significant risk of loss. Read our full risk disclosure.">
-<meta name="twitter:image" content="https://aagman-landing-page-hxgc.vercel.app/uploads/og-image.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Āagman",
-  "alternateName": "Aagman",
-  "legalName": "Koti Labs Private Limited",
-  "url": "https://aagman-landing-page-hxgc.vercel.app/",
-  "logo": "https://aagman-landing-page-hxgc.vercel.app/uploads/aagman-logo.png",
-  "foundingDate": "2025",
-  "sameAs": [
-    "https://dub.sh/lp-linkedin",
-    "https://dub.sh/x-lp",
-    "https://dub.sh/insta-lp"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "growth@kotilabs.com",
-    "contactType": "customer support",
-    "availableLanguage": [
-      "English",
-      "Hindi"
-    ]
-  }
-}
-</script>
-
-
-<script src="./support.js?v=20260622224727"></script>
-
-<script>
-(function(){
-  function getLayout(){
-    var w = window.innerWidth;
-    if (w < 768) return 'mobile';
-    if (w < 1024) return 'tablet';
-    return 'desktop';
-  }
-  function applyLayout(){
-    if (window.__dcSetProps && window.__dcRootName){
-      var layout = getLayout();
-      window.__dcSetProps(window.__dcRootName(), { layout: layout, previewLayout: layout });
-    } else {
-      setTimeout(applyLayout, 50);
-    }
-  }
-  // Initial layout is now set by the pre-boot patch on the data-props
-  // default, so we only need to react to viewport changes after load.
-  window.addEventListener('resize', applyLayout);
-})();
-</script>
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#06080A">
+  <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" fill="#06080A"/><rect x="60" y="60" width="280" height="280" rx="8" fill="#0f1a16"/><rect x="80" y="90" width="180" height="14" rx="3" fill="#F59E0B"/><rect x="80" y="120" width="240" height="8" rx="2" fill="#1a2420"/><rect x="80" y="136" width="220" height="8" rx="2" fill="#1a2420"/></svg>
+</template>
 </head>
 <body>
 <x-dc>
@@ -176,7 +22,7 @@
 <div style="width:{{ frameWidth }};min-height:100vh;background:#06080A;display:flex;flex-direction:column;margin:0 auto;border-left:1px solid rgba(255,255,255,0.08);border-right:1px solid rgba(255,255,255,0.08)">
 
   <nav style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;width:100%;padding:{{ navPad }};border-bottom:1px solid rgba(255,255,255,0.06)">
-    <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none">
+    <a href="landing-terminal.html" style="display:flex;align-items:center;gap:11px;text-decoration:none">
       <img src="uploads/aagman-logo.png" style="width:24px;height:24px;border-radius:6px;display:block" alt="Āagman">
       <span style="font-weight:700;font-size:16px;color:#E7EEEA">Āagman</span>
     </a>
@@ -221,13 +67,13 @@
         <div id="s2" style="padding:48px 0;border-top:1px solid rgba(255,255,255,0.06)">
           <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#56E8B8;text-transform:uppercase;margin-bottom:16px">02</div>
           <h2 style="font-size:24px;font-weight:700;letter-spacing:-.02em;margin:0 0 20px;color:#E7EEEA">Hypothetical results</h2>
-          <p style="font-size:15px;line-height:1.75;color:#8a938e;margin:0;max-width:640px">Information, analyses, screeners, backtests and simulated or hypothetical performance shown on Āagman are for information only and do not guarantee future results — past behaviour does not imply future behaviour.</p>
+          <p style="font-size:15px;line-height:1.75;color:#8a938e;margin:0;max-width:640px">Information, analyses, screeners, backtests and simulated or hypothetical performance shown on Aagman are for information only and do not guarantee future results — past behaviour does not imply future behaviour.</p>
         </div>
 
         <div id="s3" style="padding:48px 0;border-top:1px solid rgba(255,255,255,0.06)">
           <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#56E8B8;text-transform:uppercase;margin-bottom:16px">03</div>
           <h2 style="font-size:24px;font-weight:700;letter-spacing:-.02em;margin:0 0 20px;color:#E7EEEA">Algo provider &amp; broker</h2>
-          <p style="font-size:15px;line-height:1.75;color:#8a938e;margin:0 0 20px;max-width:640px">Āagman provides Whitebox execution algorithms as an NSE-empanelled (provisional) algo provider — Koti Labs Private Limited (NSE Circular Ref. 40/2026 (3 Jun 2026), provisional, Whitebox).</p>
+          <p style="font-size:15px;line-height:1.75;color:#8a938e;margin:0 0 20px;max-width:640px">Aagman provides Whitebox execution algorithms as an NSE-empanelled (provisional) algo provider — Koti Labs Private Limited (NSE Circular Ref. 40/2026 (3 Jun 2026), provisional, Whitebox).</p>
           <div style="padding:18px 22px;border-radius:10px;background:rgba(86,232,184,0.05);border:1px solid rgba(86,232,184,0.15);max-width:640px">
             <p style="font-size:14px;line-height:1.65;color:#8a938e;margin:0">Orders are placed in your own broker account through your broker, who is the <strong style="color:#E7EEEA">principal for execution</strong> and responsible for algo-trading grievances. Automated trading carries technology, connectivity and execution risks.</p>
           </div>
@@ -256,8 +102,8 @@
         </div>
         <div style="display:flex;flex-direction:column;gap:11px">
           <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#56E8B8;margin-bottom:4px">COMPANY</div>
-          <a href="index.html#section-founders" style="font-size:13.5px;color:#8a938e;text-decoration:none" style-hover="color:#E7EEEA">Founders letter</a>
-          <a href="https://www.linkedin.com/company/aagman-ai/jobs/" target="_blank" rel="noopener" style="font-size:13.5px;color:#8a938e;text-decoration:none" style-hover="color:#E7EEEA">Careers</a>
+          <a href="landing-terminal.html#section-founders" style="font-size:13.5px;color:#8a938e;text-decoration:none" style-hover="color:#E7EEEA">Founders letter</a>
+          <a href="#" style="font-size:13.5px;color:#8a938e;text-decoration:none" style-hover="color:#E7EEEA">Careers</a>
         </div>
         <div style="display:flex;flex-direction:column;gap:11px">
           <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#56E8B8;margin-bottom:4px">RESOURCES</div>
@@ -269,23 +115,13 @@
           <a href="terms.html" style="font-size:13.5px;color:#8a938e;text-decoration:none" style-hover="color:#E7EEEA">Terms &amp; Conditions</a>
           <a href="privacy-policy.html" style="font-size:13.5px;color:#8a938e;text-decoration:none" style-hover="color:#E7EEEA">Privacy Policy</a>
           <a href="risk-disclosure.html" style="font-size:13.5px;color:#56E8B8;text-decoration:none;font-weight:600">Risk Disclosure</a>
-          <a href="mailto:growth@kotilabs.com" style="font-size:13.5px;color:#8a938e;text-decoration:none" style-hover="color:#E7EEEA">Contact Us</a>
+          <a href="#" style="font-size:13.5px;color:#8a938e;text-decoration:none" style-hover="color:#E7EEEA">Contact Us</a>
           <a href="cancellation-refunds.html" style="font-size:13.5px;color:#8a938e;text-decoration:none" style-hover="color:#E7EEEA">Cancellations &amp; Refunds</a>
         </div>
       </div>
       <div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px">
         <span style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#4a534f">© 2026 Āagman · Koti Labs Private Limited · Markets carry risk</span>
-        <div style="display:flex;align-items:center;gap:16px">
-          <a href="https://dub.sh/lp-linkedin" target="_blank" rel="noopener" style="color:#4a534f;display:flex" style-hover="color:#56E8B8">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://dub.sh/x-lp" target="_blank" rel="noopener" style="color:#4a534f;display:flex" style-hover="color:#56E8B8">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.912-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="https://dub.sh/insta-lp" target="_blank" rel="noopener" style="color:#4a534f;display:flex" style-hover="color:#56E8B8">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-        </div>
+        <span style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#4a534f">Built for Indian markets</span>
       </div>
       <p style="margin-top:24px;font-size:11px;line-height:1.6;color:#3a4541">Disclaimer: Āagman is a research and execution-assistance tool. Nothing here is investment advice. Trading in securities and derivatives involves substantial risk of loss and is not suitable for every investor. Past and backtested performance does not guarantee future results. You are responsible for every trade you approve.</p>
     </div>
@@ -293,34 +129,6 @@
 
 </div>
 </x-dc>
-<script>
-// The DC runtime defaults layout to "desktop" and then re-renders after mount
-// when the viewport is mobile/tablet, causing a visible layout swap. Patch the
-// data-props default to the actual viewport *before* the runtime reads it, and
-// expose a global helper the component can use as a fallback.
-(function () {
-  function getLayout() {
-    var w = window.innerWidth;
-    if (w < 768) return 'mobile';
-    if (w < 1024) return 'tablet';
-    return 'desktop';
-  }
-  window.__aagmanLayout = getLayout;
-  try {
-    var next = document.currentScript.nextElementSibling;
-    if (!next || next.getAttribute('data-dc-script') === null) return;
-    var raw = next.getAttribute('data-props');
-    if (!raw) return;
-    var decoded = raw.indexOf('&quot;') !== -1 ? raw.replace(/&quot;/g, '"') : raw;
-    if (decoded.indexOf('"layout"') === -1) return;
-    var props = JSON.parse(decoded);
-    if (props && props.layout && typeof props.layout === 'object') {
-      props.layout.default = getLayout();
-      next.setAttribute('data-props', JSON.stringify(props));
-    }
-  } catch (e) {}
-})();
-</script>
 <script type="text/x-dc" data-dc-script data-props="{
   &quot;$preview&quot;: {&quot;width&quot;: &quot;1200px&quot;, &quot;height&quot;: &quot;100vh&quot;},
   &quot;previewLayout&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;desktop&quot;, &quot;options&quot;: [&quot;desktop&quot;, &quot;tablet&quot;, &quot;mobile&quot;], &quot;tsType&quot;: &quot;'desktop'|'tablet'|'mobile'&quot;}

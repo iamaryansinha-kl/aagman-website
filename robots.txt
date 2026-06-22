@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://aagman-landing-page-hxgc.vercel.app/sitemap.xml
