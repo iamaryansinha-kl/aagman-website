@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aagman-website-work.vercel.app/sitemap.xml
