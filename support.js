@@ -144,6 +144,12 @@
       return s;
     }
   }
+  function detectLayout() {
+    const w = typeof window !== "undefined" ? window.innerWidth : 1200;
+    if (w < 768) return "mobile";
+    if (w < 1024) return "tablet";
+    return "desktop";
+  }
   function boot(runtime, doc = document) {
     const parsed = parseDcDocument(doc);
     if (!parsed) return null;
@@ -167,6 +173,16 @@
     }
     const Root = runtime.getDC(rootName);
     const entry = runtime.registry.get(rootName);
+    const initialLayout = detectLayout();
+    entry.propOverrides = { ...entry.propOverrides, layout: initialLayout, previewLayout: initialLayout };
+    window.addEventListener("resize", () => {
+      const newLayout = detectLayout();
+      const cur = entry.propOverrides || {};
+      if (cur.layout !== newLayout) {
+        entry.propOverrides = { ...cur, layout: newLayout, previewLayout: newLayout };
+        runtime.registry.bump(rootName);
+      }
+    });
     function StandaloneRoot() {
       const [, setTick] = React.useState(0);
       React.useEffect(() => {
