@@ -62,3 +62,4 @@ This folder is the complete Āagman marketing site as plain static HTML. No buil
 4. **Custom domain (optional):** add the domain in the host's dashboard and create the DNS record it gives you (CNAME for subdomains; the host's A/ALIAS records for an apex like `aagman.in`).
 
 There is no build command and no environment variables. If the host asks for a build step, leave it blank — these are pre-built static files.
+
