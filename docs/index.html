@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T72DN6HQ');</script>
+<!-- End Google Tag Manager -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('click', function(e) {
+    var el = e.target.closest('a');
+    if (!el) return;
+    var href = el.getAttribute('href') || '';
+    var text = (el.textContent || '').trim().substring(0, 50);
+    window.dataLayer = window.dataLayer || [];
+    if (href.indexOf('app.aagman.ai') !== -1) {
+      window.dataLayer.push({ event: 'get_started_click', location: 'body', text: text, href: href });
+    }
+  });
+});
+</script>
+<title>Docs | Āagman Guides</title>
+<meta name="description" content="Guides for using Āagman: how to write prompts, connect your broker, and get started with AI-powered trading for Indian markets.">
+<link rel="canonical" href="https://www.aagman.ai/docs/">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:title" content="Docs | Āagman Guides">
+<meta property="og:description" content="Guides for using Āagman: how to write prompts, connect your broker, and get started.">
+<meta property="og:image" content="https://www.aagman.ai/uploads/og-image.png">
+<meta property="og:url" content="https://www.aagman.ai/docs/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script src="../support.js"></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T72DN6HQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#06080A}
+  a{text-decoration:none}
+</style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column;background:#06080A;font-family:'Schibsted Grotesk','Bricolage Grotesque',sans-serif;color:#E7EEEA;">
+
+  <!-- nav -->
+  <nav style="position:sticky;top:0;z-index:50;background:#06080A;border-bottom:1px solid rgba(255,255,255,0.06)">
+    <div style="max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between">
+      <a href="/" style="display:flex;align-items:center;gap:11px">
+        <img src="../uploads/aagman-logo.png" width="28" height="28" style="width:28px;height:28px;border-radius:7px;display:block" alt="Āagman">
+        <span style="font-weight:700;font-size:17px;letter-spacing:-.01em;color:#E7EEEA">Āagman</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:28px;font-family:'Geist Mono',monospace;font-size:12.5px;color:#8a938e">
+        <a href="/" style="color:#8a938e;transition:color .2s" style-hover="color:#E7EEEA">Home</a>
+        <a href="/pricing" style="color:#8a938e;transition:color .2s" style-hover="color:#E7EEEA">Pricing</a>
+        <a href="/docs/" style="color:#E7EEEA;font-weight:600">Docs</a>
+        <a href="https://app.aagman.ai/login" style="padding:9px 18px;border-radius:6px;background:#56E8B8;color:#04150F;font-weight:600;cursor:pointer;font-size:13px">Get started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero -->
+  <div style="border-bottom:1px solid rgba(255,255,255,0.06)">
+    <div style="max-width:1200px;margin:0 auto;padding:80px 24px 56px">
+      <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:#56E8B8;text-transform:uppercase;margin-bottom:14px">Documentation</div>
+      <h1 style="font-size:clamp(36px,5vw,52px);line-height:1.05;letter-spacing:-.04em;font-weight:700;margin:0 0 18px">Learn how to use <span style="background:linear-gradient(100deg,#8CF0BC 0%,#6FE6CD 28%,#67C7F1 52%,#93B6F4 76%,#C2A9F2 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent">Āagman</span></h1>
+      <p style="font-size:17px;line-height:1.6;color:#8a938e;max-width:560px;margin:0">Step-by-step guides to go from your first prompt to placing live trades through your broker.</p>
+    </div>
+  </div>
+
+  <!-- guide cards -->
+  <div style="flex:1">
+    <div style="max-width:1200px;margin:0 auto;padding:56px 24px 96px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px">
+
+        <a href="./how-to-prompt.html" style="display:block;padding:32px;border-radius:16px;background:#0C1012;border:1px solid rgba(86,232,184,0.25);transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-4px);box-shadow:0 12px 40px -12px rgba(0,0,0,0.6)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
+            <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#56E8B8;text-transform:uppercase">Start Here</span>
+            <span style="width:36px;height:36px;border-radius:9px;background:rgba(86,232,184,0.1);display:flex;align-items:center;justify-content:center;color:#56E8B8">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="13" y2="17"></line></svg>
+            </span>
+          </div>
+          <h2 style="font-size:22px;font-weight:700;letter-spacing:-.02em;color:#E7EEEA;margin:0 0 10px">How to Prompt Āagman</h2>
+          <p style="font-size:14px;line-height:1.6;color:#8a938e;margin:0 0 18px">Learn to write natural-language prompts for backtests, screeners, portfolios, and live trades — in English, Hindi, or Hinglish.</p>
+          <span style="display:inline-flex;align-items:center;gap:8px;font-family:'Geist Mono',monospace;font-size:12px;color:#56E8B8;font-weight:600">Read guide <span>→</span></span>
+        </a>
+
+        <a href="./connect-zerodha.html" style="display:block;padding:32px;border-radius:16px;background:#0C1012;border:1px solid rgba(255,255,255,0.08);transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-4px);box-shadow:0 12px 40px -12px rgba(0,0,0,0.6)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
+            <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;color:#8a938e;text-transform:uppercase">Brokers</span>
+            <span style="width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;color:#E7EEEA">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path><line x1="12" y1="12" x2="12" y2="16"></line><line x1="10" y1="14" x2="14" y2="14"></line></svg>
+            </span>
+          </div>
+          <h2 style="font-size:22px;font-weight:700;letter-spacing:-.02em;color:#E7EEEA;margin:0 0 10px">Connect Zerodha</h2>
+          <p style="font-size:14px;line-height:1.6;color:#8a938e;margin:0 0 18px">Link your Zerodha trading account through Kite Connect and pair the Āagman Relay Chrome extension for live order routing.</p>
+          <span style="display:inline-flex;align-items:center;gap:8px;font-family:'Geist Mono',monospace;font-size:12px;color:#56E8B8;font-weight:600">Read guide <span>→</span></span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer style="border-top:1px solid rgba(255,255,255,0.06);background:#06080A">
+    <div style="max-width:1200px;margin:0 auto;padding:48px 24px">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+        <a href="/" style="display:flex;align-items:center;gap:11px">
+          <img src="../uploads/aagman-logo.png" width="28" height="28" style="width:28px;height:28px;border-radius:7px;display:block" alt="Āagman">
+          <span style="font-weight:700;font-size:17px;color:#E7EEEA">Āagman</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:24px;font-size:13.5px;color:#8a938e;font-family:'Geist Mono',monospace">
+          <a href="/" style="color:#8a938e" style-hover="color:#E7EEEA">Home</a>
+          <a href="/pricing" style="color:#8a938e" style-hover="color:#E7EEEA">Pricing</a>
+          <a href="/docs/" style="color:#E7EEEA;font-weight:600">Docs</a>
+          <a href="/terms" style="color:#8a938e" style-hover="color:#E7EEEA">Terms</a>
+          <a href="/privacy-policy" style="color:#8a938e" style-hover="color:#E7EEEA">Privacy</a>
+        </div>
+      </div>
+      <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px">
+        <span style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#4a534f">© 2026 Āagman · Koti Labs Private Limited · Markets carry risk</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

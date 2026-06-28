@@ -14,8 +14,17 @@ This folder is the complete Āagman marketing site as plain static HTML. No buil
 | `privacy-policy.html` | Privacy Policy | `/privacy-policy.html` |
 | `risk-disclosure.html` | Risk Disclosure | `/risk-disclosure.html` |
 | `cancellation-refunds.html` | Cancellations & Refunds | `/cancellation-refunds.html` |
+| `docs/` | Documentation section | `/docs/` |
 | `support.js` | Shared runtime (required — keep alongside the HTML) | — |
 | `uploads/` | Logo + founder photos | — |
+
+### Docs section (`docs/`)
+
+| File | Page | URL path |
+|---|---|---|
+| `docs/index.html` | Docs hub / guide listing | `/docs/` |
+| `docs/how-to-prompt.html` | How to Prompt Āagman | `/docs/how-to-prompt.html` |
+| `docs/connect-zerodha.html` | Connect Zerodha broker | `/docs/connect-zerodha.html` |
 
 `index.html` is the homepage (the original "terminal" landing). `landing-gradient.html` is an alternate version with a green→cyan→blue→lavender gradient on the headlines. To use the gradient one as the homepage instead, swap the two files: rename `index.html` → `landing-terminal.html` and `landing-gradient.html` → `index.html`.
 
